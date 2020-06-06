@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,  initial-scale=1">
+        <title>Crestron CH5 Basic</title>
+        <link rel="stylesheet" href="css\main.css" />
+        <link rel="stylesheet" href="assets\vendor\light-theme.css" />
+    </head>
+    <body>
+        <div class="top-bar">
+            <img id="logo-img" src="./assets/images/globe.png">
+            <h1 id="header-text">CH5 Basic Example - Sliders</h1>
+            <h1></h1>
+        </div>
+        <div class="middle-bar">
+            <!-- Just a gauge on analog join 1 -->
+            <ch5-slider 
+                customclass="gauge-vert"
+                orientation="vertical" 
+                stretch="both"
+                nohandle="true"
+                receivestatevalue="1"
+                >
+            </ch5-slider>
+            <!-- Slider with handle analog join 2-->
+            <ch5-slider          
+                customclass="slider-vert"
+                orientation="vertical"
+                handleshape="rounded-rectangle"
+                handlesize="x-large"
+                stretch="both"
+                receivestatevalue="2"
+                sendeventonchange="2"
+                >
+            </ch5-slider>
+            
+        </div>
+        <script src="assets\vendor\cr-com-lib.js"></script>
+        <!-- Comment 2 lines below before archiving or they will run the emulator on the touchpanel -->
+        <script src="assets\vendor\service.js"></script>
+        <script src="assets\vendor\app.js"></script>
+         <!--*************************************************************************************-->
+    </body>
+</html>
